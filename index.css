@@ -28,23 +28,26 @@ h1
 
 #taskForm   
 
-{   align-items: center;
+{   
     height: 50px;
     width: 300px;
-    flex-direction: row;
+    align-items: center;
+
     justify-content: center;
-    background-color: white;
     display: flex;
+    background-color: white;
 }
 
 
 #taskList
 
 {   align-items: center;
-    height: 50px;
+    height: 200px;
     width: 260px;
     justify-content: center;
     background-color: white;
+    display:flex;
+
 
 }
 
@@ -53,9 +56,9 @@ h1
 {
     border: none;
     background-color: #eff0f1;
-    width: 180px;
+    width: 270px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: -65px;
 
 }
 
@@ -73,16 +76,18 @@ h1
 }
 
 
-
+div{
+    margin-bottom: 10p;
+}
 
 #button
 {
 
     background-color: #ff3397;
-    height:20px;
+    height:30px;
     color: white;
-    width:60px;
-    
+    width:45px;
+    margin-left: 15px;
     border-radius: 5px;
     border:none;
 }

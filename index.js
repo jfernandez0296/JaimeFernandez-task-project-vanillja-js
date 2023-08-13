@@ -50,7 +50,8 @@ function renderTasks() {
     li.innerHTML = `
       <input type="checkbox" data-id="${task.id}" ${task.completed ? 'checked' : ''}>
       <span class="${task.completed ? 'is-completed' : ''}">${task.title}</span>
-    `;
+      <hr>
+      `;
     taskList.appendChild(li);
   });
 }
