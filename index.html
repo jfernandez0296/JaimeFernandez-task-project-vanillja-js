@@ -1,69 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <style>
-    .is-completed {
-      text-decoration: line-through;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <title>Tareas por hacer</title>
+  
 </head>
 <body>
-  <h1>To-Do List</h1>
+  <h1>Tareas por hacer</h1>
   <form id="taskForm">
-    <input type="text" id="taskInput" placeholder="Ingresa tu nueva tarea">
-    <button type="submit">Agregar</button>
+    <input type="text" id="taskInput" placeholder="">
+  
+    <button id="button" type="submit">Add</button>
   </form>
   <ul id="taskList"></ul>
   <button id="deleteCompleted">Delete all done</button>
+  <script src="index.js"></script>
 
-  <script>
-    const taskForm = document.getElementById('taskForm');
-    const taskInput = document.getElementById('taskInput');
-    const taskList = document.getElementById('taskList');
-    const deleteCompleted = document.getElementById('deleteCompleted');
-
-    let tasks = [];
-
-    taskForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const newTask = {
-        id: Date.now(),
-        title: taskInput.value,
-        completed: false,
-      };
-      tasks.push(newTask);
-      renderTasks();
-      taskInput.value = '';
-    });
-
-    taskList.addEventListener('click', function(e) {
-      if (e.target.tagName === 'INPUT' && e.target.type === 'checkbox') {
-        const taskId = parseInt(e.target.dataset.id);
-        const task = tasks.find(task => task.id === taskId);
-        task.completed = !task.completed;
-        renderTasks();
-      }
-    });
-
-    deleteCompleted.addEventListener('click', function() {
-      tasks = tasks.filter(task => !task.completed);
-      renderTasks();
-    });
-
-    function renderTasks() {
-      taskList.innerHTML = '';
-      tasks.forEach(task => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <input type="checkbox" data-id="${task.id}" ${task.completed ? 'checked' : ''}>
-          <span class="${task.completed ? 'is-completed' : ''}">${task.title}</span>
-        `;
-        taskList.appendChild(li);
-      });
-    }
-  </script>
 </body>
 </html>

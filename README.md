@@ -9,5 +9,3 @@ Aqui el maker debe escribir las instrucciones o pasos clonar el repositorio y ca
 ## Dificultades
 
 El maker debe listar cuales fueron las dificultades que tuvo al desarrollar el ejercicio.
-
-Las dificultades estuvieron en aplicación de la guía, ya que un pequeño cambio afectaba al resro del código.
