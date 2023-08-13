@@ -32,7 +32,6 @@ h1
     height: 50px;
     width: 300px;
     align-items: center;
-
     justify-content: center;
     display: flex;
     background-color: white;
@@ -41,13 +40,13 @@ h1
 
 #taskList
 
-{   align-items: center;
+{ 
     height: 200px;
     width: 260px;
-    justify-content: center;
+    padding-left: 20px;
     background-color: white;
-    display:flex;
-
+    padding-top: 10px;
+    padding-right: 15px;
 
 }
 
@@ -59,7 +58,6 @@ h1
     width: 270px;
     height: 35px;
     margin-right: -65px;
-
 }
 
 
